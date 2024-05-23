@@ -1,0 +1,63 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation Bar Styles */
+.navbar {
+    background-color: #f8f9fa;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #333;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #007bff;
+    color: #fff;
+    padding: 100px 0;
+}
+
+/* About Section Styles */
+.about {
+    padding: 80px 0;
+}
+
+/* Portfolio Section Styles */
+.portfolio {
+    padding: 80px 0;
+}
+
+.portfolio-item {
+    margin-bottom: 30px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* Contact Section Styles */
+.contact {
+    padding: 80px 0;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
