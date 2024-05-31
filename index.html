@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyson Gonsalves - Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        .icon-large {
+            font-size: 2em;
+        }
+    </style>
 </head>
 
 <body>
 
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Joyson Gonsalves</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,57 +36,75 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-download"
+                        href="https://github.com/Joyson1/Joyson1.github.io/raw/main/Joyson_Gonsalves_Resume.docx"
+                        download>Download Resume</a>
+                </li>
             </ul>
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="darkSwitch">
+                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container text-center">
+    <section class="hero bg-light text-dark py-5 text-center">
+        <div class="container">
             <h1>Welcome to My Portfolio</h1>
             <p>I'm a Data Analyst with a passion for data-driven insights.</p>
         </div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="about py-5">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <h2>About Me</h2>
-                    <p>I am a passionate Data Analyst with a strong background in Mechanical Engineering and Project Management. I have a keen interest in leveraging data to drive business decisions and solve complex problems.</p>
+                    <p>I am a passionate Data Analyst with a strong background in Mechanical Engineering and Project
+                        Management. I have a keen interest in leveraging data to drive business decisions and solve
+                        complex problems.</p>
                 </div>
-                <div class="col-lg-6">
-                    <img src="https://github.com/Joyson1/Joyson1.github.io/blob/main/WhatsApp%20Image%202024-05-14%20at%2010.14.56%20AM.jpeg?raw=true" alt="Profile Picture" style="width: 150px; height: 150px; border-radius: 50%;">
+                <div class="col-lg-6 text-center">
+                    <img src="https://github.com/Joyson1/Joyson1.github.io/blob/main/pics/WhatsApp_Image_2024-05-23_at_1.42.21_PM-removebg-preview.png?raw=true"
+                        alt="Profile Picture" class="img-fluid profile-picture">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio py-5 bg-light">
         <div class="container">
             <h2>Portfolio</h2>
             <div class="row">
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="portfolio-item1.jpg" alt="Portfolio Item" class="img-fluid">
-                        <h3>Project 1</h3>
-                        <p>Description of Project 1</p>
+                        <img src="https://github.com/Joyson1/Joyson1.github.io/blob/main/pics/alex-kotliarskyi-QBpZGqEMsKg-unsplash.jpg?raw=true"
+                            alt="Portfolio Item" class="img-fluid">
+                        <h3>Employee Performance Dashboard</h3>
+                        <p>Collected and cleaned data in Excel, then visualized employee productivity, attendance, and
+                            performance ratings in an interactive Power BI dashboard.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="portfolio-item2.jpg" alt="Portfolio Item" class="img-fluid">
-                        <h3>Project 2</h3>
-                        <p>Description of Project 2</p>
+                        <img src="https://github.com/Joyson1/Joyson1.github.io/blob/main/pics/agence-olloweb-qfp4-Ud6Fyg-unsplash.jpg?raw=true"
+                            alt="Portfolio Item" class="img-fluid">
+                        <h3>E-commerce Website Analytics</h3>
+                        <p>Extracted web and sales data with SQL, analyzed in Python, and visualized traffic trends,
+                            user behavior, and sales performance in an interactive Tableau dashboard.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="portfolio-item">
-                        <img src="portfolio-item3.jpg" alt="Portfolio Item" class="img-fluid">
-                        <h3>Project 3</h3>
-                        <p>Description of Project 3</p>
+                        <img src="https://github.com/Joyson1/Joyson1.github.io/blob/main/pics/scott-graham-5fNmWej4tAA-unsplash.jpg?raw=true"
+                            alt="Portfolio Item" class="img-fluid">
+                        <h3>Healthcare Data Analysis</h3>
+                        <p>Used SQL, Python, and Power BI to analyze healthcare data for trends and treatment
+                            effectiveness, presenting findings in an interactive dashboard.</p>
                     </div>
                 </div>
             </div>
@@ -87,46 +112,43 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <section id="contact" class="contact py-5">
         <div class="container">
-            <h2>Contact Me</h2>
-            <div class="row">
-                <div class="col-lg-6">
-                    <form action="submit.php" method="POST">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="col-lg-6">
-                    <h3>Contact Details</h3>
-                    <p>Email: joysongonsalves4@gmail.com<br>Phone: 647-878-5732</p>
+            <div class="col-lg-6">
+                <h3>Contact Details</h3>
+                <p>Email: joysongonsalves4@gmail.com<br>Phone: 647-878-5732</p>
+                <div class="social-icons">
+                    <a href="https://github.com/Joyson1" target="_blank"><i class="fab fa-github icon-large"></i></a>
+                    <a href="https://www.linkedin.com/in/gonsalvesjoyson/" target="_blank"><i class="fab fa-linkedin icon-large"></i></a>
+                    <a href="https://www.instagram.com/joyson.gonsalves/" target="_blank"><i class="fab fa-instagram icon-large"></i></a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; 2024 Joyson Gonsalves. All Rights Reserved.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="dark-mode-switch.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        document.getElementById('darkSwitch').addEventListener('change', function (event) {
+            if (event.target.checked) {
+                document.body.setAttribute('data-theme', 'dark');
+            } else {
+                document.body.removeAttribute('data-theme');
+            }
+        });
+    </script>
 </body>
 
 </html>
