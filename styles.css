@@ -1,63 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 /* Global Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+body[data-theme="dark"] {
+    background-color: #222;
+    color: #f5f5f5;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
-/* Navigation Bar Styles */
+/* Navbar Styles */
 .navbar {
-    background-color: #f8f9fa;
+    background-color: #2e2f2d !important; /* Dark gray navbar */
 }
 
-.navbar-brand {
-    font-weight: bold;
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #f6f7f2 !important; /* White text color */
 }
 
-.nav-link {
-    color: #333;
+.navbar-brand:hover,
+.navbar-nav .nav-link:hover {
+    color: #f8f9fa !important; /* Light gray text color on hover */
+}
+
+body[data-theme="dark"] .navbar {
+    background-color: #333;
 }
 
 /* Hero Section Styles */
 .hero {
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fafbfc;
+    color: #0d0c0c;
     padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3em;
+    animation: fadeIn 2s;
+}
+
+.hero p {
+    font-size: 1.25em;
+}
+
+body[data-theme="dark"] .hero {
+    background-color: #333;
+    color: #f5f5f5;
 }
 
 /* About Section Styles */
 .about {
-    padding: 80px 0;
+    padding: 50px 0;
+}
+
+.about img.profile-picture {
+    max-width: 100%;
+    border-radius: 50%;
 }
 
 /* Portfolio Section Styles */
 .portfolio {
-    padding: 80px 0;
+    padding: 50px 0;
+}
+
+.portfolio h2 {
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 .portfolio-item {
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .portfolio-item img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 15px;
+    border-radius: 5px;
+    max-width: 100%;
+}
+
+.portfolio-item h3 {
+    margin-top: 15px;
+}
+
+.portfolio-item p {
+    font-size: 0.9em;
 }
 
 /* Contact Section Styles */
 .contact {
-    padding: 80px 0;
+    padding: 50px 0;
+}
+
+.contact h3 {
+    text-align: center;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.social-icons {
+    text-align: center;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
 
 /* Footer Styles */
 .footer {
-    background-color: #f8f9fa;
-    padding: 20px 0;
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Dark Mode Switch Styles */
+.custom-switch .custom-control-label::before {
+    background-color: #6c757d;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: #007bff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
