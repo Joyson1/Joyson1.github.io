@@ -9,11 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        .icon-large {
-            font-size: 2em;
-        }
-    </style>
 </head>
 
 <body>
@@ -42,10 +37,6 @@
                         download>Download Resume</a>
                 </li>
             </ul>
-            <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="darkSwitch">
-                <label class="custom-control-label" for="darkSwitch">Dark Mode</label>
-            </div>
         </div>
     </nav>
 
@@ -129,26 +120,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="dark-mode-switch.js"></script>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        document.getElementById('darkSwitch').addEventListener('change', function (event) {
-            if (event.target.checked) {
-                document.body.setAttribute('data-theme', 'dark');
-            } else {
-                document.body.removeAttribute('data-theme');
-            }
-        });
-    </script>
 </body>
 
 </html>
