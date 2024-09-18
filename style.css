@@ -1,0 +1,261 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: rgb(237, 227, 227);
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Horizontal scroll tiles */
+.scrolling-tiles {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 20px;
+    background-color: rgb(237, 227, 227);
+    scroll-behavior: smooth;
+}
+
+/* Style for the tile links */
+.tile {
+    display: block;
+    margin-right: 10px;
+    position: relative;
+    transition: transform 0.4s ease, width 0.4s ease, height 0.4s ease;
+    text-decoration: none; /* Remove underline from the link */
+    color: inherit; /* Make sure the text inside the link inherits color */
+}
+
+.tile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    transition: transform 0.4s ease, width 0.4s ease;
+}
+
+/* Alternate tile sizes */
+.tile:nth-child(odd) img {
+    width: 250px;
+    height: 180px;
+}
+
+.tile:nth-child(even) img {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+}
+
+/* Hover effect for tiles */
+.tile:hover img {
+    width: 340px;
+    height: 180px;
+    transform: scaleX(1.0);
+}
+
+.tile.expand-right img {
+    transform: scaleX(1.2);
+}
+
+/* Tile description overlay */
+.tile-description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.tile:hover .tile-description {
+    opacity: 1;
+}
+
+/* Grayscale overlay on hover */
+.tile::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.667);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.tile:hover::before {
+    opacity: 1;
+}
+
+.tile:hover img {
+    z-index: 0;
+}
+
+.tile:hover .tile-description {
+    z-index: 2;
+}
+
+/* Branding Section */
+.branding {
+    position: absolute;
+    top: 60%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.branding h1 {
+    font-size: 8rem;
+    color: #222;
+    font-weight: 900;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease;
+    text-align: left;
+}
+
+.branding .first-name {
+    display: block;
+    margin-bottom: -50px;
+}
+
+.branding .last-name {
+    display: block;
+    font-size: 8rem;
+}
+
+/* Summary Section */
+.summary {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(249, 249, 249, 0);
+    border-radius: 0px;
+    padding: 20px;
+    width: 600px;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.summary h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.summary p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.summary button {
+    background-color: #03030340;
+    color: rgb(4, 4, 4);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Floating Contact Info Styles */
+.floating-contact {
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px; /* Updated width for larger box */
+    height: 250px; /* Updated height for larger box */
+    background: #333;
+    color: white;
+    padding: 30px; /* Adjusted padding for more space */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.floating-contact.show {
+    display: block;
+}
+
+.floating-content {
+    position: relative;
+}
+
+.close-button {
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+}
+
+/* Backdrop for blurring effect */
+.backdrop {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    transition: opacity 0.3s ease;
+}
+
+.backdrop.show {
+    display: block;
+}
+
+/* Social Icons Styles */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px; /* Spacing for social icons */
+}
+
+.social-icons a img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Resume Button Styles */
+.resume-button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #000000; /* Bootstrap primary color */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Tagline Styles */
+.tagline {
+    font-style: italic;
+    margin: 10px 0;
+    font-size: 18px;
+    text-align: center; /* Center align the tagline */
+}
